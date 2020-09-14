@@ -1,0 +1,32 @@
+CREATE TABLE competences (ID INT PRIMARY KEY AUTOINCREMENT, name TEXT, status TEXT, numero_competence INT);
+INSERT INTO competences (name, status, numero_competence) VALUES
+("Fatima", "vert", 1),
+("Deborah", "vert", 1),
+("Fatima", "vert", 2),
+("Deborah", "vert", 2),
+("Steeven", "vert", 2),
+("Camille", "vert", 2),
+("Maxim", "bleu", 1),
+("Steeven", "bleu", 1),
+("Camille", "bleu", 1),
+("Lucas", "bleu", 2),
+("Chloe", "bleu", 2),
+("Pierre", "bleu", 2),
+("Isa", "bleu", 2),
+("Julie", "bleu", 2),
+("Voja", "bleu", 2),
+("Jojo", "violet", 1),
+("Pierre", "violet", 1),
+("Clement", "violet", 1),
+("Jojo", "violet", 2),
+("Jojo", "violet", 3),
+("Steeven", "violet", 3),
+("Camille", "violet", 3);
+
+
+UPDATE competences SET status =
+CASE WHEN status "bleu" THEN "vert"
+ELSE status
+END;
+SELECT * FROM competences;
+
